@@ -1,12 +1,37 @@
+
+<spacer size="20"></spacer>
 <container>
 	<row>
-	    <columns large="12">
-	    	<spacer size="100"></spacer>
-	    </columns large="12">
+		<columns large="12">
+			<spacer size="20"></spacer>
+		</columns>
 	</row>
+
 	<row>
-		<callout small="12" large="12" class="primary small-text-center text-right">________________revision_summary
-		</callout>
+		<columns large="4"><strong>Specification No:</strong></columns>
+	    <columns large="8"> TFP01-001</columns large="8">
+	</row>
+
+	<row>
+	    <columns large="4"><strong>Specification Name:</strong></columns>
+	    <columns large="8"> Blah balh blah...</columns large="8">
+	</row>
+
+	<row>
+		<columns large="4"><strong>Revision:</strong></columns>
+	    <columns large="8"> **</columns large="8">
+	</row>
+
+	<row>
+		<columns large="4"><strong>Summary of changes:</strong></columns>
+	</row>
+
+	<row>
+		<columns large="12">
+			<callout class="primary">
+				<< $spec->companySpecRevision->revision_summary >>
+			</callout>
+		</columns>
 	</row>
 </container>
 
@@ -18,10 +43,11 @@
     </row>
 
     <row>
-		<columns>
-      		<center>
-				<button href="#" class="center success rounded">Expanded Button</button>
-			</center>
+    	<columns class="show-for-large"></columns>
+		<columns large="4" small="12">
+				<button href="<< URL::to(route("internal.show",[ "internal" => $spec->id ])) >>" class="success rounded">View it now</button>
 		</columns>
 	</row>
 </container>
+
+<spacer size="100"></spacer>
