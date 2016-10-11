@@ -1,5 +1,9 @@
+<h1 class="text-center text-danger"><strong> DCC Online </strong></h1>
+<h4 class="text-center"><small>Document Information System</small></h4>
 
 <spacer size="20"></spacer>
+
+
 <container>
 	<row>
 		<columns large="12">
@@ -8,46 +12,113 @@
 	</row>
 
 	<row>
-		<columns large="4"><strong>Specification No:</strong></columns>
-	    <columns large="8"> TFP01-001</columns large="8">
+		<columns small="12" large="4">
+			<p class="text-danger small-text-left text-right">
+				<strong>Specification No:</strong>
+			</p>
+		</columns>
+
+	    <columns small="12" large="8">
+	    	<p class="text-info">-- "$spec->spec_no" --</p>
+	    </columns>
 	</row>
 
 	<row>
-	    <columns large="4"><strong>Specification Name:</strong></columns>
-	    <columns large="8"> Blah balh blah...</columns large="8">
+	    <columns small="12" large="4">
+	    	<p class="text-danger small-text-left text-right">
+	    		<strong>Specification Name:</strong>
+	    	</p>
+	    </columns>
+
+	    <columns small="12" large="8"><p class="text-info">-- "$spec->name" --</p></columns>
 	</row>
 
 	<row>
-		<columns large="4"><strong>Revision:</strong></columns>
-	    <columns large="8"> **</columns large="8">
+		<columns small="12" large="4">
+			<p class="text-danger small-text-left text-right">
+				<strong>Revision:</strong>
+			</p>
+		</columns>
+
+	    <columns small="12" large="8"><p class="text-info">-- "$spec->companySpecRevision->revision" --</p></columns>
 	</row>
 
 	<row>
-		<columns large="4"><strong>Summary of changes:</strong></columns>
+		<columns small="12" large="4">
+			<p class="text-danger small-text-left text-right">
+				<strong>Revision Date:</strong>
+			</p>
+		</columns>
+
+	    <columns small="12" large="8"><p class="text-info">-- "$spec->companySpecRevision->revision_date" --</p></columns>
 	</row>
 
 	<row>
-		<columns large="12">
-			<callout class="primary">
-				<< $spec->companySpecRevision->revision_summary >>
+		<columns large="4"><p class="text-danger"><strong>Summary of changes:</strong></p></columns>
+		<columns></columns>
+	</row>
+
+	<row>
+		<columns>
+			<callout class="success">
+				<p>
+				-- "$spec->companySpecRevision->revision_summary" --
+				</p>
 			</callout>
 		</columns>
 	</row>
-</container>
-
-<container>
-  <row>
-	    <columns>
-	    	<spacer size="100"></spacer>
-	    </columns>
-    </row>
 
     <row>
     	<columns class="show-for-large"></columns>
+
 		<columns large="4" small="12">
-				<button href="<< URL::to(route("internal.show",[ "internal" => $spec->id ])) >>" class="success rounded">View it now</button>
+			<center>
+				<button href="URL_TO_INTERNAL.SHOW" class="expanded success large">View it now</button>
+			</center>
+		</columns>
+
+		<columns class="show-for-large"></columns>
+	</row>
+
+	<row>
+		<columns>
+			<spacer size="20"></spacer>
+		</columns>
+	</row>
+
+	<row>
+		<columns large="6" small="12">
+			<p class="text-left small-text-center text-info">
+				Regards,
+			</p>
+			<p class="text-left small-text-center text-info">
+				<strong>DCC Online</strong>
+			</p>
+		</columns>
+		<columns class="show-for-large"></columns>
+	</row>
+
+	<row>
+		<columns><hr/></columns>
+	</row>
+
+	<row>
+		<columns>
+		<p><small>If you're trouble clicking the "View it now" button, copy and paste the URL below into your web browser.</small></p>
+		</columns>
+	</row>
+
+	<row>
+		<columns>
+			<a href="URL_TO_INTERNAL.SHOW">
+				URL_TO_INTERNAL.SHOW
+			</a>
 		</columns>
 	</row>
 </container>
 
 <spacer size="100"></spacer>
+
+<p class="text-center text-info">
+	<strong>&copy; DCC Online. All rights reserved.</strong>
+</p>
