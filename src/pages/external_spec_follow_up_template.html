@@ -1,11 +1,10 @@
-<h1 class="text-center text-danger"><strong>-- "$system" --</strong></h1>
-<h4 class="text-center"><small><em>-- "$sub_title" --</em></small></h4>
+<h1 class="text-center text-danger"><strong>-- "$data["system"]" --</strong></h1>
+<h4 class="text-center"><small><em>-- "$data["sub_title"]" --</em></small></h4>
 
 <spacer size="20"></spacer>
 
 
 <container>
-
 	<row>
 		<columns large="12">
 			<spacer size="20"></spacer>
@@ -26,20 +25,23 @@
 		</columns>
 	</row>
 
-	<row>
-	    <columns large="7">
-	    	<p class="text-info text-left">-- "Str::upper($spec->spec_no . " " . $spec->customerSpecRevision->revision)" --</p>
-	    </columns>
-	    <columns large="2">
-	    	<p class="text-danger text-right">-- "Carbon::parse($spec->customerSpecRevision->revision_date)->diffForHumans()" --</p>
-	    </columns>
+	@foreach($data["specs"] as $spec)
 
-		<columns large="3">
-			<center>
-				<button href="URL_TO_EXTERNAL" class="expanded alert">View it now</button>
-			</center>
-		</columns>
-	</row>
+		<row>
+		    <columns small="12" large="6">
+		    	<p class="text-info text-left">-- "$spec["name"]" --</p>
+		    </columns>
+		    <columns small="12" large="3">
+		    	<p class="text-danger text-left">-- "$spec["date"]" --</p>
+		    </columns>
+
+			<columns small="4" large="3">
+				<center>
+					<button href="URL_TO_EXTERNAL_SHOW" class="expanded alert">View it now</button>
+				</center>
+			</columns>
+		</row>
+	@endforeach
 
 	<row>
 		<columns>
@@ -58,24 +60,6 @@
 			</p>
 		</columns>
 		<columns class="show-for-large"></columns>
-	</row>
-
-	<row>
-		<columns><hr/></columns>
-	</row>
-
-	<row>
-		<columns>
-		<p><small>If you're trouble clicking the "View it now" button, copy and paste the URL below into your web browser.</small></p>
-		</columns>
-	</row>
-
-	<row>
-		<columns>
-			<a href="URL_TO_EXTERNAL">
-				URL_TO_EXTERNAL
-			</a>
-		</columns>
 	</row>
 </container>
 
