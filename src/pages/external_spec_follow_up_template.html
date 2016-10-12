@@ -1,0 +1,86 @@
+<h1 class="text-center text-danger"><strong>-- "$system" --</strong></h1>
+<h4 class="text-center"><small><em>-- "$sub_title" --</em></small></h4>
+
+<spacer size="20"></spacer>
+
+
+<container>
+
+	<row>
+		<columns large="12">
+			<spacer size="20"></spacer>
+		</columns>
+	</row>
+
+	<row>
+		<columns large="12">
+			<h3 class="text-info"><strong>Hello,</strong></h3>
+		</columns>
+	</row>
+
+	<row>
+		<columns small="12" large="12">
+			<h4 class="text-warning text-left">
+				<strong>Follow up for customer specification waiting for review:</strong>
+			</h4>
+		</columns>
+	</row>
+
+	<row>
+	    <columns large="7">
+	    	<p class="text-info text-left">-- "Str::upper($spec->spec_no . " " . $spec->customerSpecRevision->revision)" --</p>
+	    </columns>
+	    <columns large="2">
+	    	<p class="text-danger text-right">-- "Carbon::parse($spec->customerSpecRevision->revision_date)->diffForHumans()" --</p>
+	    </columns>
+
+		<columns large="3">
+			<center>
+				<button href="URL_TO_EXTERNAL" class="expanded alert">View it now</button>
+			</center>
+		</columns>
+	</row>
+
+	<row>
+		<columns>
+			<spacer size="20"></spacer>
+		</columns>
+	</row>
+
+	<row>
+		<columns large="6" small="12">
+			<p class="text-left small-text-center text-info">
+				Regards,
+			</p>
+
+			<p class="text-left small-text-center text-info">
+				<strong>DCC Online</strong>
+			</p>
+		</columns>
+		<columns class="show-for-large"></columns>
+	</row>
+
+	<row>
+		<columns><hr/></columns>
+	</row>
+
+	<row>
+		<columns>
+		<p><small>If you're trouble clicking the "View it now" button, copy and paste the URL below into your web browser.</small></p>
+		</columns>
+	</row>
+
+	<row>
+		<columns>
+			<a href="URL_TO_EXTERNAL">
+				URL_TO_EXTERNAL
+			</a>
+		</columns>
+	</row>
+</container>
+
+<spacer size="100"></spacer>
+
+<p class="text-center text-info">
+	<strong>&copy; DCC Online. All rights reserved.</strong>
+</p>

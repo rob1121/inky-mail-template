@@ -1,10 +1,16 @@
-<h1 class="text-center text-danger"><strong> DCC Online </strong></h1>
-<h4 class="text-center"><small>Document Information System</small></h4>
+<h1 class="text-center text-danger"><strong> -- "$system" -- </strong></h1>
+<h4 class="text-center"><small><em>-- "$sub_title" --</em></small></h4>
 
 <spacer size="20"></spacer>
 
 
 <container>
+	<row>
+		<columns large="12">
+			<h1 class="text-center text-info">-- "$spec->customerSpecRevision->is_reviewed ? "" : "For Review"" --</h1>
+		</columns>
+	</row>
+
 	<row>
 		<columns large="12">
 			<spacer size="20"></spacer>
@@ -13,58 +19,39 @@
 
 	<row>
 		<columns small="12" large="4">
-			<p class="text-danger small-text-left text-right">
+			<p class="text-info small-text-left text-right">
 				<strong>Specification No:</strong>
 			</p>
 		</columns>
 
 	    <columns small="12" large="8">
-	    	<p class="text-info">-- "$spec->spec_no" --</p>
+	    	<p class="text-info">-- "Str::upper)($spec->spec_no" --</p>
 	    </columns>
 	</row>
 
 	<row>
 	    <columns small="12" large="4">
-	    	<p class="text-danger small-text-left text-right">
+	    	<p class="text-info small-text-left text-right">
 	    		<strong>Specification Name:</strong>
 	    	</p>
 	    </columns>
 
-	    <columns small="12" large="8"><p class="text-info">-- "$spec->name" --</p></columns>
+	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($spec->name)" --</p></columns>
 	</row>
 
 	<row>
 		<columns small="12" large="4">
-			<p class="text-danger small-text-left text-right">
+			<p class="text-info small-text-left text-right">
 				<strong>Revision:</strong>
 			</p>
 		</columns>
 
-	    <columns small="12" large="8"><p class="text-info">-- "$spec->companySpecRevision->revision" --</p></columns>
-	</row>
-
-	<row>
-		<columns small="12" large="4">
-			<p class="text-danger small-text-left text-right">
-				<strong>Revision Date:</strong>
-			</p>
-		</columns>
-
-	    <columns small="12" large="8"><p class="text-info">-- "$spec->companySpecRevision->revision_date" --</p></columns>
-	</row>
-
-	<row>
-		<columns large="4"><p class="text-danger"><strong>Summary of changes:</strong></p></columns>
-		<columns></columns>
+	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($spec->customerSpecRevision->revision)" --</p></columns>
 	</row>
 
 	<row>
 		<columns>
-			<callout class="success">
-				<p>
-				-- "$spec->companySpecRevision->revision_summary" --
-				</p>
-			</callout>
+			<spacer size="20"></spacer>
 		</columns>
 	</row>
 
@@ -73,7 +60,7 @@
 
 		<columns large="4" small="12">
 			<center>
-				<button href="URL_TO_INTERNAL.SHOW" class="expanded success large">View it now</button>
+				<button href="URL_TO_EXTERNAL.SHOW" class="expanded success large">View it now</button>
 			</center>
 		</columns>
 
@@ -110,8 +97,8 @@
 
 	<row>
 		<columns>
-			<a href="URL_TO_INTERNAL.SHOW">
-				URL_TO_INTERNAL.SHOW
+			<a href="URL_TO_EXTERNAL.SHOW">
+				URL_TO_EXTERNAL.SHOW
 			</a>
 		</columns>
 	</row>
