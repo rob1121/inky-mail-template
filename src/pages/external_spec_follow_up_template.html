@@ -8,8 +8,8 @@
 	<row>
 		<columns large="12">
 			<spacer size="20"></spacer>
-		</columns>
-	</row>
+		</columns
+>	</row>
 
 	<row>
 		<columns large="12">
@@ -29,7 +29,7 @@
 
 		<row>
 		    <columns small="12" large="6">
-		    	<p class="text-info text-left">-- "$spec["name"]" --</p>
+		    	<p class="text-info text-left"><strong>-- "$spec["name"]" --</strong><small class="text-info text-left">(<em class="text-danger">Reviewer: -- "$spec["reviewer"]" --</em>)</small></p>
 		    </columns>
 		    <columns small="12" large="3">
 		    	<p class="text-danger text-left">-- "$spec["date"]" --</p>
@@ -37,11 +37,21 @@
 
 			<columns small="4" large="3">
 				<center>
-					<button href="URL_TO_EXTERNAL_SHOW" class="expanded alert">View it now</button>
+					<button href="link_to_route" class="expanded alert">View it now</button>
 				</center>
 			</columns>
 		</row>
 	@endforeach
+	<row>
+		<columns>
+			<spacer size="20"></spacer>
+		</columns>
+	</row>
+	<row>
+		<columns>
+			<em><small class="text-danger text-center">Please note that customer specification review shall be done within five (5) working days, failure to comply within the given period has corresponding QDN. Reference Specs:<strong> <a href="link_to_dcc">TFP08-002 - Document Control Procedure</a></strong></small></em>
+		</columns>
+	</row>
 
 	<row>
 		<columns>
@@ -66,5 +76,5 @@
 <spacer size="100"></spacer>
 
 <p class="text-center text-info">
-	<strong>&copy; DCC Online. All rights reserved.</strong>
+	<strong>Telford Svc. Phils., Inc. &copy; DCC Online. All rights reserved.</strong>
 </p>

@@ -1,5 +1,5 @@
-<h1 class="text-center text-danger"><strong> -- "$system" -- </strong></h1>
-<h4 class="text-center"><small><em>-- "$sub_title" --</em></small></h4>
+<h1 class="text-center text-danger"><strong> -- "$data["system"]" -- </strong></h1>
+<h4 class="text-center"><small><em>-- "$data["sub_title"]" --</em></small></h4>
 
 <spacer size="20"></spacer>
 
@@ -7,7 +7,7 @@
 <container>
 	<row>
 		<columns large="12">
-			<h1 class="text-center text-info">-- "$spec->customerSpecRevision->is_reviewed ? "" : "For Review"" --</h1>
+			<h1 class="text-center text-info">-- "$data["spec"]->customerSpecRevision->is_reviewed ? "" : "For Review"" --</h1>
 		</columns>
 	</row>
 
@@ -25,7 +25,7 @@
 		</columns>
 
 	    <columns small="12" large="8">
-	    	<p class="text-info">-- "Str::upper)($spec->spec_no" --</p>
+	    	<p class="text-info">-- "Str::upper($data["spec"]->spec_no)" --</p>
 	    </columns>
 	</row>
 
@@ -36,7 +36,7 @@
 	    	</p>
 	    </columns>
 
-	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($spec->name)" --</p></columns>
+	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($data["spec"]->name)" --</p></columns>
 	</row>
 
 	<row>
@@ -46,7 +46,7 @@
 			</p>
 		</columns>
 
-	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($spec->customerSpecRevision->revision)" --</p></columns>
+	    <columns small="12" large="8"><p class="text-info">-- "Str::upper($data["spec"]->customerSpecRevision->revision)" --</p></columns>
 	</row>
 
 	<row>
@@ -60,11 +60,34 @@
 
 		<columns large="4" small="12">
 			<center>
-				<button href="URL_TO_EXTERNAL.SHOW" class="expanded success large">View it now</button>
+				<button href="URL_TO_EXTERNAL_SHOW" class="expanded success large">View it now</button>
 			</center>
 		</columns>
 
 		<columns class="show-for-large"></columns>
+	</row>
+
+	<row>
+		<columns>
+			<spacer size="20"></spacer>
+		</columns>
+	</row>
+
+	<row>
+		<columns large="12">
+		    <p class="text-default"> Hello Team -- "Str::upper($data["spec"]->reviewer)" --, </p>
+	    </columns>
+	</row>
+
+    <row>
+    	<columns large="1"></columns>
+
+	    <columns small="12" large="8">
+			<spacer size="20"></spacer>
+
+		    <p class="text-danger"> FYI.. </p>
+		    <p class="text-danger"> Please accomplish within five <strong>(5)</strong> working days. </p>
+	    </columns>
 	</row>
 
 	<row>
@@ -97,8 +120,8 @@
 
 	<row>
 		<columns>
-			<a href="URL_TO_EXTERNAL.SHOW">
-				URL_TO_EXTERNAL.SHOW
+			<a href="URL_TO_EXTERNAL_SHOW">
+				URL_TO_EXTERNAL_SHOW
 			</a>
 		</columns>
 	</row>
